@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-      <h1>Elisabeth Kaseda</h1>
+      <h1 className="font-heading text-primary text-2xl">Elisabeth Kaseda</h1>
+      <p>Portfolio coming soon!</p>
     </>
   )
 }
