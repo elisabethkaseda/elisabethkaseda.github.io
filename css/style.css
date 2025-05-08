@@ -235,6 +235,7 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 3);
     }
 
     a.logo {
@@ -244,6 +245,10 @@ footer {
     nav {
         width: auto;
         gap: clamp(3.2rem, 3.2vw, 3.6rem);
+    }
+
+    section {
+        padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 3);
     }
 
     #intro {
@@ -268,6 +273,14 @@ footer {
 }
 
 @media (min-width: 1080px) {
+    header {
+        padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 3) calc(50% - 475px);
+    }
+
+    section {
+        padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 3) calc(50% - 475px);
+    }
+
 	.work-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
