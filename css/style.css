@@ -36,10 +36,12 @@ h3 {
     font-family: var(--header-font);
     font-weight: 600;
     margin-bottom: 0.75em;
+    text-align: center;
 }
 
 h1 {
     font-size: clamp(3.2rem, 3.2vw, 3.6rem);
+    color: var(--secondary);
 }
 
 h2 {
@@ -58,6 +60,38 @@ a:visited {
 a:hover,
 a:focus {
     color: var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--accent);
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: clamp(2.0rem, 2.0vw, 2.4rem);
+    text-decoration: none;
+    margin: 1em 0;
+    margin-bottom: 0;
+    padding: 0.5em 1em;
+    border: 0.15em solid var(--secondary);
+    border-radius: 0.75em;
+}
+
+.btn-secondary {
+    background-color: var(--background);
+    color: var(--secondary);
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: clamp(2.0rem, 2.0vw, 2.4rem);
+    text-decoration: none;
+    margin: 1em 0;
+    margin-bottom: 0;
+    padding: 0.5em 1em;
+    border: 0.15em solid var(--secondary);
+    border-radius: 0.75em;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -80,7 +114,7 @@ a.logo {
     font-weight: 600;
     font-size: clamp(3.2rem, 3.2vw, 3.6rem);
     text-decoration: none;
-    margin-bottom: clamp(1.6rem, 1.6vw, 1.8rem);
+    margin-bottom: clamp(2.4rem, 2.4vw, 2.7rem);
 }
 
 a.logo:hover,
@@ -106,9 +140,56 @@ section {
     padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 2);
 }
 
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(3.2rem, 3.2vw, 3.6rem);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
 #skills {
     background-color: var(--secondary);
     color: var(--color-text);
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.skill {
+    margin: clamp(1.6rem, 1.6vw, 1.8rem) 0;
+}
+
+#work h2 {
+    color: var(--secondary);
+}
+
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    margin: clamp(1.6rem, 1.6vw, 1.8rem) 0;
+}
+
+.work-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #about {
@@ -116,9 +197,19 @@ section {
     color: var(--color-text);
 }
 
+#skills h2,
+#about h2 {
+    color: var(--accent);
+}
+
 #contact {
     background-color: var(--secondary);
     color: var(--color-text);
+}
+
+#contact h2 {
+    text-align: start;
+    color: var(--accent);
 }
 
 footer {
@@ -136,11 +227,50 @@ footer {
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 768px) {
-	/* anything you want to kick in at small tablet and above can go here */
+	h1 {
+        text-align: start;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a.logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: auto;
+        gap: clamp(3.2rem, 3.2vw, 3.6rem);
+    }
+
+    #intro {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #intro img {
+        flex: 1 1 0px;
+    }
+
+    .skill-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: clamp(3.2rem, 3.2vw, 3.6rem);
+    }
+
+    .work-container {
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(3.2rem, 3.2vw, 3.6rem);
+    }
 }
 
 @media (min-width: 1080px) {
-	/* anything you want to kick in at large tablet and above can go here */
+	.work-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (min-width: 1300px) {
