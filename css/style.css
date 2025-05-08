@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --background: #F0ECE5;
+  --text: #1D060E;
+  --color-text: #F0ECE5;
+  --neutral: #8A7F7A;
+  --tertiary: #6B1236;
+  --secondary: #214757;
+  --primary: #47530B;
+  --accent: #E3AF2C;
+  --body-font: 'Urbanist', sans-serif;
+  --header-font: 'Josefin Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--body-font);
+    font-size: clamp(1.6rem, 1.6vw, 1.8rem);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--header-font);
+    font-weight: 600;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: clamp(3.2rem, 3.2vw, 3.6rem);
+}
+
+h2 {
+    font-size: clamp(2.4rem, 2.4vw, 2.7rem);
+}
+
+p {
+    line-height: clamp(3.2rem, 3.2vw, 3.6rem);
+}
+
+a, 
+a:visited {
+    color: var(--color-text);
+}
+
+a:hover,
+a:focus {
+    color: var(--accent);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Section Styles                               */
+/* -------------------------------------------------------------------------- */
+
+header {
+    background-color: var(--primary);
+    color: var(--color-text);
+    min-height: 4rem;
+    padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.logo {
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: clamp(3.2rem, 3.2vw, 3.6rem);
+    text-decoration: none;
+    margin-bottom: clamp(1.6rem, 1.6vw, 1.8rem);
+}
+
+a.logo:hover,
+a.logo:focus {
+    color: var(--color-text);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: var(--header-font);
+    font-size: clamp(2.4rem, 2.4vw, 2.7rem);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+section {
+    padding: calc(clamp(1.6rem, 1.6vw, 1.8rem) * 2);
+}
+
+#skills {
+    background-color: var(--secondary);
+    color: var(--color-text);
+}
+
+#about {
+    background-color: var(--tertiary);
+    color: var(--color-text);
+}
+
+#contact {
+    background-color: var(--secondary);
+    color: var(--color-text);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--color-text);
+    min-height: 4rem;
+    padding: clamp(1.6rem, 1.6vw, 1.8rem) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Queries                               */
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+	/* anything you want to kick in at small tablet and above can go here */
+}
+
+@media (min-width: 1080px) {
+	/* anything you want to kick in at large tablet and above can go here */
+}
+
+@media (min-width: 1300px) {
+	/* anything you want to kick in at desktop and above can go here */
+}
